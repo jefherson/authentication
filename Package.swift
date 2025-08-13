@@ -5,20 +5,16 @@ import PackageDescription
 
 let package = Package(
     name: "Authentication",
-    products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "Authentication",
-            targets: ["Authentication"]),
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v10_15)
     ],
+    products: [
+        .library(name: "Authentication", targets: ["Authentication"]),
+    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "Authentication"),
-        .testTarget(
-            name: "AuthenticationTests",
-            dependencies: ["Authentication"]
-        ),
+        .target(name: "Authentication", dependencies: []),
+        .testTarget(name: "AuthenticationTests", dependencies: ["Authentication"]),
     ]
 )
