@@ -1,18 +1,13 @@
 // The Swift Programming Language
-// https://docs.swift.org/swift-book
 
-import SwiftUI
+import Foundation
 
-public struct AuthenticationView: View {
+public struct Authentication {
     public init() {}
-    
-    public var body: some View {
-        VStack {
-            Text("Login Screen")
-                .font(.title)
-            Button("Login") {
-                print("User logged in")
-            }
-        }
+
+    public func login(user: String, password: String) -> Bool {
+        // Aquí va tu lógica real
+        // Ejemplo: usuario "admin" y password "1234" es válido
+        return user == "admin" && password == "1234"
     }
 }
